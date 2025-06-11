@@ -1,4 +1,5 @@
 # JavaScript erweitern: nützliche Effekte & Funktionen passend zur aktuellen Website
+// Hinweis: Tooltips bei Leistungen sind über CSS realisiert – keine JS-Logik nötig.
 
 js_enhanced = """
 // Scroll-to-Top Button (optional hinzufügen)
