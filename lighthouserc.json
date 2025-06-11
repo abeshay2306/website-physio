@@ -4,7 +4,7 @@
       "startServerCommand": "npx serve .",
       "url": [
         "http://localhost:3000/index.html",
-        "http://localhost:3000/danke.html"
+        "http://localhost:3000/Danke.html"
       ],
       "startServerReadyPattern": "Accepting connections"
     },

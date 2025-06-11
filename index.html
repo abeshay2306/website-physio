@@ -12,27 +12,40 @@
 </head>
 <body>
   <header>
-    <div><img src="img/Logo-Physiosynergie.jpeg" alt="Logo Physio Synergie"></div>
+    <div class="logo-container">
+      <img src="img/Logo-Physiosynergie.jpeg" alt="Logo Physio Synergie">
+    </div>
     <nav>
       <a href="#leistungen">Leistungen</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>„Therapie, die verbindet.“</h1>
-  </section>
+  <main>
+    <section class="hero">
+      <h1>„Therapie, die verbindet.“</h1>
+    </section>
 
-  <section class="section" id="leistungen">
-    <h2>Unsere Leistungen</h2>
-    <div class="services">
-      <div class="card">Klassische Physiotherapie</div>
-      <div class="card">Manuelle Therapie</div>
-      <div class="card">Lymphdrainage</div>
-      <div class="card">Sportrehabilitation</div>
-      <div class="card">Hausbesuche</div>
-    </div>
-  </section>
+    <section class="section" id="leistungen">
+      <h2>Unsere Leistungen</h2>
+      <div class="services">
+        <div class="card" data-tooltip="Fördert Beweglichkeit, lindert Schmerzen und verbessert Muskelkraft.">
+          Klassische Physiotherapie
+        </div>
+        <div class="card" data-tooltip="Gezielte Mobilisation von Gelenken und Wirbelsäule – bei Blockaden, Verspannungen oder Fehlstellungen.">
+          Manuelle Therapie
+        </div>
+        <div class="card" data-tooltip="Sanfte Entstauungstherapie bei Schwellungen, Lymphödemen oder nach Operationen.">
+          Lymphdrainage
+        </div>
+        <div class="card" data-tooltip="Funktionelles Training zur Wiederherstellung von Kraft, Koordination und Belastbarkeit nach Verletzungen.">
+          Sportrehabilitation
+        </div>
+        <div class="card" data-tooltip="Therapie in den eigenen vier Wänden – bei Mobilitätseinschränkungen oder auf ärztliche Anordnung.">
+          Hausbesuche
+        </div>
+      </div>
+    </section>
 
   <section class="section" style="background: var(--light-gray);">
     <h2>Erfahrung & Kompetenz</h2>
@@ -77,14 +90,16 @@
     </form>
   </section>
 
-  <section class="cta">
-    <h2>Warten Sie nicht auf Besserung – handeln Sie jetzt.</h2>
-    <a href="#kontakt">Termin vereinbaren</a>
-  </section>
+    <section class="cta">
+      <h2>Warten Sie nicht auf Besserung – handeln Sie jetzt.</h2>
+      <a href="#kontakt">Termin vereinbaren</a>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Physio Synergie – Florina Frunza | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
-  </footer>
+  </main>
+
+    <footer>
+      <p>&copy; 2025 Physio Synergie – Florina Frunza | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+    </footer>
 
   <script src="script.js"></script>
 </body>

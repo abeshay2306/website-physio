@@ -39,15 +39,6 @@ header {
   min-height: 100px;
 }
 
-header img {
-  height: auto;
-  max-height: 120px;
-  width: auto;
-  position: absolute;
-  top: -30px;
-  left: 2rem;
-  z-index: 1100;
-}
 
 nav a {
   margin-left: 1.5rem;
@@ -137,4 +128,44 @@ footer {
   padding: 2rem;
   text-align: center;
   font-size: 0.9rem;
+}
+
+/* Logo sichtbar machen */
+.logo-container img {
+  position: absolute;
+  top: -30px;
+  left: 2rem;
+  max-height: 100px;
+  width: auto;
+  z-index: 1100;
+}
+
+/* Tooltip bei Hover unterhalb der Karte */
+.card {
+  position: relative;
+  cursor: help;
+}
+
+.card::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  background: var(--light-gray);
+  color: var(--dark);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  text-align: center;
+}
+
+.card:hover::after {
+  opacity: 1;
 }
