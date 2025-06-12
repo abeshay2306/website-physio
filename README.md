@@ -40,6 +40,12 @@ Zielgruppe sind Patient*innen, die nach professioneller Physiotherapie, Hausbesu
 - Keine externen Frameworks
 - Optionales Formular via [Formspree.io](https://formspree.io)
 
+## Newsletter Backend
+
+Die Anmeldung zum Newsletter wird über einen separaten Backend-Service verarbeitet. Die URL des Endpunkts muss in
+`script.js` hinterlegt sein. Stelle sicher, dass der Dienst läuft und Anfragen
+akzeptiert, bevor du die Seite veröffentlichst.
+
 ---
 
 ## 🌐 Geplante Erweiterungen
