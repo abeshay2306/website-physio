@@ -1,4 +1,3 @@
-@ -0,0 +1,179 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -157,6 +156,26 @@
           required
         ></textarea>
         <button type="submit">Nachricht senden</button>
+      </form>
+    </section>
+    <!-- Newsletter -->
+    <section class="section" id="newsletter">
+      <h2>Newsletter abonnieren</h2>
+      <form id="newsletter-form">
+        <label for="news-name">Name</label>
+        <input type="text" id="news-name" name="name" autocomplete="name" />
+        <label for="news-email">E-Mail *</label>
+        <input type="email" id="news-email" name="email" required autocomplete="email" />
+        <div class="hidden">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="privacy" required />
+          <span>Ich akzeptiere die <a href="#">Datenschutzerklärung</a>.</span>
+        </label>
+        <button type="submit">Anmelden</button>
+        <p class="success-message" aria-live="polite"></p>
       </form>
     </section>
 

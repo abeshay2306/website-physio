@@ -1,4 +1,3 @@
-@ -0,0 +1,36 @@
 /* JavaScript – kleine UX-Helfer
  * Tooltips der Leistungskarten werden rein per CSS (::after) gesteuert,
  * daher hier kein zusätzlicher JS-Code nötig.
@@ -34,4 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.transform = 'translateY(0)';
     });
   });
+  const newsletter = document.getElementById("newsletter-form");
+  if (newsletter) {
+    newsletter.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(newsletter);
+      if (data.get("website")) return;
+      const res = await fetch("https://example.com/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: data.get("email"), name: data.get("name") }),
+      });
+      const msg = newsletter.querySelector(".success-message");
+      if (res.ok) {
+        msg.textContent = "Danke für Ihre Anmeldung!";
+        newsletter.reset();
+      } else {
+        msg.textContent = "Leider ist ein Fehler aufgetreten.";
+      }
+    });
+  }
 });
