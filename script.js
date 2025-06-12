@@ -28,23 +28,31 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.transform = 'translateY(0)';
     });
   });
-  const newsletter = document.getElementById("newsletter-form");
+  const newsletter = document.getElementById('newsletter-form');
   if (newsletter) {
-    newsletter.addEventListener("submit", async (e) => {
+    newsletter.addEventListener('submit', async (e) => {
       e.preventDefault();
       const data = new FormData(newsletter);
-      if (data.get("website")) return;
-      const res = await fetch("https://example.com/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: data.get("email"), name: data.get("name") }),
-      });
-      const msg = newsletter.querySelector(".success-message");
-      if (res.ok) {
-        msg.textContent = "Danke für Ihre Anmeldung!";
-        newsletter.reset();
-      } else {
-        msg.textContent = "Leider ist ein Fehler aufgetreten.";
+      if (data.get('website')) return;
+      const msg = newsletter.querySelector('.success-message');
+      try {
+        // TODO: ersetze durch die URL des Newsletter-Backends
+        const res = await fetch('https://example.com/api/newsletter', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: data.get('email'),
+            name: data.get('name'),
+          }),
+        });
+        if (res.ok) {
+          msg.textContent = 'Danke für Ihre Anmeldung!';
+          newsletter.reset();
+        } else {
+          msg.textContent = 'Leider ist ein Fehler aufgetreten.';
+        }
+      } catch {
+        msg.textContent = 'Netzwerkfehler – bitte erneut versuchen.';
       }
     });
   }
