@@ -24,7 +24,7 @@ Zielgruppe sind Patient*innen, die nach professioneller Physiotherapie, Hausbesu
 ├── index.html          # Hauptseite mit allen Infos
 ├── style.css           # Design & Layout
 ├── script.js           # Interaktive Elemente
-├── danke.html          # Bestätigungsseite nach Formular
+├── Danke.html          # Bestätigungsseite nach Formular
 ├── AGENTS.md           # Anweisungen für Codex-Agent
 ├── README.md           # Diese Datei
 └── img/

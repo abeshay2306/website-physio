@@ -64,7 +64,7 @@ Dies ist eine moderne, minimalistische und datenschutzkonforme Website für eine
 ├── index.html
 ├── style.css
 ├── script.js
-├── danke.html
+├── Danke.html
 ├── img/
 │   └── Logo-Physiosynergie.jpeg
 └── AGENTS.md (diese Datei)
