@@ -1,3 +1,4 @@
+@ -0,0 +1,97 @@
 # AGENTS.md – Codex Agenten-Anleitung für Website-Florina
 
 ## Projektbeschreibung
