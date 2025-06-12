@@ -1,8 +1,3 @@
-/* JavaScript – kleine UX-Helfer
- * Tooltips der Leistungskarten werden rein per CSS (::after) gesteuert,
- * daher hier kein zusätzlicher JS-Code nötig.
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   /* Smooth Anchor Scroll */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
