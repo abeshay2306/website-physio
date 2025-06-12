@@ -1,5 +1,4 @@
-@ -0,0 +1,13 @@
-export default [
+module.exports = [
   {
     files: ['**/*.js'],
     languageOptions: {
