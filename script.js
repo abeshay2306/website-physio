@@ -1,3 +1,4 @@
+// Tooltips für die Leistungskarten werden rein per CSS umgesetzt
 document.addEventListener('DOMContentLoaded', () => {
   /* Smooth Anchor Scroll */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
