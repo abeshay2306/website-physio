@@ -61,6 +61,11 @@ Zielgruppe sind Patient*innen, die nach professioneller Physiotherapie, Hausbesu
 - Performance: Google Lighthouse
 - Barrierefreiheit: a11y-Checks
 
+### Befehle
+
+- `npm run lint:css` – führt stylelint für alle CSS-Dateien aus
+- `npm run validate:html` – validiert die HTML-Dateien per html-validator-cli
+
 ---
 
 ## 👩‍⚕️ Projektinhaberin

@@ -1,0 +1,19 @@
+{
+  "name": "website-physio",
+  "version": "1.0.0",
+  "description": "Dies ist die offizielle Website der Physiotherapeutin Florina Frunza BSc, entwickelt als moderne, minimalistische und vertrauensvolle Plattform zur Präsentation ihrer therapeutischen Leistungen.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:css": "stylelint '**/*.css'",
+    "validate:html": "html-validator --file=index.html --format text && html-validator --file=Danke.html --format text"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "html-validator-cli": "^7.0.1",
+    "stylelint": "^15.11.0"
+  }
+}
