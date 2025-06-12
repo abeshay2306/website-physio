@@ -61,6 +61,18 @@ Zielgruppe sind Patient*innen, die nach professioneller Physiotherapie, Hausbesu
 - Performance: Google Lighthouse
 - Barrierefreiheit: a11y-Checks
 
+### Lokale Prüfung
+Führe nach Konfigurationsänderungen folgende Befehle aus:
+
+```bash
+# CSS-Analyse
+npx stylelint style.css
+# HTML-Analyse
+npx htmlhint index.html
+# JavaScript-Analyse
+npx eslint script.js
+```
+
 ---
 
 ## 👩‍⚕️ Projektinhaberin
