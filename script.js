@@ -1,32 +1,26 @@
-# JavaScript erweitern: nützliche Effekte & Funktionen passend zur aktuellen Website
-// Hinweis: Tooltips bei Leistungen sind über CSS realisiert – keine JS-Logik nötig.
-
-js_enhanced = """
-// Scroll-to-Top Button (optional hinzufügen)
-document.addEventListener(\"DOMContentLoaded\", () => {
-  // Smooth anchor scroll
-  document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+document.addEventListener('DOMContentLoaded', () => {
+  /* Smooth Anchor Scroll */
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+      const target = document.querySelector(anchor.getAttribute('href'));
+      target?.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
-  // Formular Bestätigung im lokalen Modus (falls ohne Redirect getestet wird)
+  /* Formular-Hinweis im lokalen Testmodus (Datei-URL) */
   const form = document.querySelector('form');
   if (form && window.location.protocol === 'file:') {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Formular abgeschickt (Testmodus). In Live-Umgebung wird weitergeleitet.');
+      alert(
+        'Formular abgeschickt (Testmodus). In der Live-Umgebung wird weitergeleitet.'
+      );
     });
   }
 
-  // Optional: kleine Animation bei Hover für Karten (CSS ist vorbereitet)
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(card => {
+  /* Kleine Hover-Animation für Karten – reine Ergänzung zu Tooltip-CSS */
+  document.querySelectorAll('.card').forEach((card) => {
     card.addEventListener('mouseenter', () => {
       card.style.transform = 'translateY(-5px)';
     });
@@ -34,10 +28,24 @@ document.addEventListener(\"DOMContentLoaded\", () => {
       card.style.transform = 'translateY(0)';
     });
   });
+  const newsletter = document.getElementById("newsletter-form");
+  if (newsletter) {
+    newsletter.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(newsletter);
+      if (data.get("website")) return;
+      const res = await fetch("https://example.com/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: data.get("email"), name: data.get("name") }),
+      });
+      const msg = newsletter.querySelector(".success-message");
+      if (res.ok) {
+        msg.textContent = "Danke für Ihre Anmeldung!";
+        newsletter.reset();
+      } else {
+        msg.textContent = "Leider ist ein Fehler aufgetreten.";
+      }
+    });
+  }
 });
-"""
-
-# Speichern als neue Version von script.js
-js_path_enhanced = Path("/mnt/data/script.js")
-js_path_enhanced.write_text(js_enhanced.strip(), encoding="utf-8")
-js_path_enhanced.name
