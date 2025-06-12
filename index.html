@@ -114,14 +114,17 @@
         src="https://maps.google.com/maps?q=Fischeraustra%C3%9Fe%2013%2C%201210%20Wien&t=&z=13&ie=UTF8&iwloc=&output=embed"
       ></iframe>
 
-      <form action="https://formspree.io/f/mwpbljvy" method="POST">
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://www.Physiosynergie.at/danke.html" />
-        <input type="text" name="name" placeholder="Ihr Name" required />
-        <input type="email" name="email" placeholder="Ihre E-Mail" required />
-        <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
-        <button type="submit">Nachricht senden</button>
-      </form>
+        <form action="https://formspree.io/f/mwpbljvy" method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://www.Physiosynergie.at/danke.html" />
+          <label for="contact-name">Ihr Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Ihr Name" required />
+          <label for="contact-email">Ihre E-Mail</label>
+          <input type="email" id="contact-email" name="email" placeholder="Ihre E-Mail" required />
+          <label for="contact-message">Ihre Nachricht</label>
+          <textarea id="contact-message" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+          <button type="submit">Nachricht senden</button>
+        </form>
     </section>
 
     <!-- Newsletter -->
