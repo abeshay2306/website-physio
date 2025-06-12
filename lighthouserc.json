@@ -1,11 +1,10 @@
-@ -0,0 +1,44 @@
 {
   "ci": {
     "collect": {
       "startServerCommand": "npx serve .",
       "url": [
         "http://localhost:3000/index.html",
-        "http://localhost:3000/Danke.html"
+        "http://localhost:3000/danke.html"
       ],
       "startServerReadyPattern": "Accepting connections"
     },

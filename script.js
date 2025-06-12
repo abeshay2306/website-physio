@@ -1,4 +1,4 @@
-@ -0,0 +1,36 @@
+/* Haupt-JavaScript */
 /* JavaScript – kleine UX-Helfer
  * Tooltips der Leistungskarten werden rein per CSS (::after) gesteuert,
  * daher hier kein zusätzlicher JS-Code nötig.
