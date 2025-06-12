@@ -72,8 +72,13 @@ Führe nach Konfigurationsänderungen folgende Befehle aus:
 
 ```bash
 # CSS-Analyse
+# via npm
+npm run lint:css
+# alternativ direkt
 npx stylelint style.css
 # HTML-Analyse
+npm run lint:html
+# alternativ
 npx htmlhint index.html
 # JavaScript-Analyse
 npx eslint script.js
